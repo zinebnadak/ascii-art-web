@@ -6,7 +6,7 @@
 <What the project does.>
 
 ## Authors
-- Zineb Nadak
+- Zineb 
 - Safae
 - Mohammed
 
