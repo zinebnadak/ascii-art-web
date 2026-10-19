@@ -5,11 +5,6 @@
 ## Description
 <What the project does.>
 
-## Authors
-- Zineb 
-- Safae
-- Mohammed
-
 ## Usage
 git clone https://github.com/zinebnadak/ascii-art-web.git
 cd ascii-art-web
@@ -34,4 +29,4 @@ Output: <short output>
 - <concept>
 - <concept>
 
-Built at [grit:lab](https://gritlab.ax/), Åland (01-edu peer-learning program).
+Built at [grit:lab](https://gritlab.ax/) Åland (01-edu peer-learning program).
