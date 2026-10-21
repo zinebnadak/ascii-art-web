@@ -12,33 +12,35 @@
 
         <form action="/ascii-art" method="POST">
             <label for="text">Text</label>
-            <textarea id="text" name="text" placeholder="Type something..." required></textarea> <!-- REQUIRED FIELD -->
+                        <textarea id="text" name="text" placeholder="Type something..." required>{{.Text}}</textarea> <!-- REQUIRED FIELD , the text gets saved-->
 
+            <!-- ALSO REQUIRED FIELD, the font gets saved-->
             <span>Font</span>
+
             <div class="banners">
-                <input type="radio" id="standard" name="banner" value="standard" checked>
+                <input type="radio" id="standard" name="banner" value="standard"
+                       {{if or (eq .Banner "standard") (eq .Banner "")}}checked{{end}}>
                 <label for="standard">standard</label>
 
-                <input type="radio" id="shadow" name="banner" value="shadow">
+                <input type="radio" id="shadow" name="banner" value="shadow"
+                       {{if eq .Banner "shadow"}}checked{{end}}>
                 <label for="shadow">shadow</label>
 
-                <input type="radio" id="thinkertoy" name="banner" value="thinkertoy">
+                <input type="radio" id="thinkertoy" name="banner" value="thinkertoy"
+                       {{if eq .Banner "thinkertoy"}}checked{{end}}>
                 <label for="thinkertoy">thinkertoy</label>
             </div>
 
             <button type="submit">Generate art</button>
         </form>
 
+        <!-- PLACEHOLDER for the Ascii art-->
         <div class="screen">
-<pre>
- _    _   _
-| |  | | (_)
-| |__| |  _
-|  __  | | |
-| |  | | | |
-|_|  |_| |_|
-</pre>
+            <div class="screen">
+                <pre>{{.Art}}</pre>
+            </div>
         </div>
+
     </main>
 </body>
 </html>
@@ -48,10 +50,24 @@
 NOTES: 
 - The server only sends files it’s told to send, so whoever writes main.go must add: http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static")))) 
 - Open webpage with: open templates/index.html
+- “if Banner equals shadow, write the word checked, otherwise write nothing”
+- THE Go code must send the template a struct with exactly these three field:
 
+type PageData struct {
+    Text   string
+    Banner string
+    Art    string
+}
 
 PROBLEM: 
 we need a special tag that keeps spaces and line breaks exactly as they are.
 -->
+
+
+
+
+
+
+
     
 
