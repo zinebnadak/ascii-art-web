@@ -5,28 +5,7 @@
 ## Description
 <What the project does.>
 
-## Usage
-git clone https://github.com/zinebnadak/ascii-art-web.git
-cd ascii-art-web
-go run .
-Then open http://localhost:<port> in your browser.
+![git command](images/git.png)
 
-## Example
-Input:  <short input>
-Output: <short output>
-
-## Implementation details
-<Algorithm: how text + banner become ASCII art.>
-
-## Tests
-<test command>
-
-## Tech
-- Language: Go
-- Dependencies: standard library only
-
-## What I learned
-- <concept>
-- <concept>
 
 Built at [grit:lab](https://gritlab.ax/) Åland (01-edu peer-learning program).
