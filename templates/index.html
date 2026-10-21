@@ -11,8 +11,21 @@
         <h1>ASCII ART WEB</h1>
 
         <form action="/ascii-art" method="POST">
-            <label for="text">Input text below</label>
+            <label for="text">Text</label>
             <textarea id="text" name="text" placeholder="Type something..." required></textarea> <!-- REQUIRED FIELD -->
+                
+                <span>Font</span>
+                <div class="banners">
+                    <input type="radio" id="standard" name="banner" value="standard" checked>
+                    <label for="standard">standard</label>
+
+                    <input type="radio" id="shadow" name="banner" value="shadow">
+                    <label for="shadow">shadow</label>
+
+                    <input type="radio" id="thinkertoy" name="banner" value="thinkertoy">
+                    <label for="thinkertoy">thinkertoy</label>
+                </div>
+            
             <button type="submit">Generate art</button>
         </form>
     </main>
