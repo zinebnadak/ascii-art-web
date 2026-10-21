@@ -1,6 +1,23 @@
+/* center the page */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: sans-serif;
+}
+
+/* stack the form elements vertically */
 form {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    max-width: 500px;
+    max-width: 500px;   /* keeps the box and button from getting too wide */
+}
+
+/* the display screen */
+.screen {
+    margin-top: 20px;
+    padding: 10px;
+    min-height: 150px;
+    border: 2px solid black;
+    overflow-x: auto;   /* wide art scrolls sideways instead of wrapping */
 }
