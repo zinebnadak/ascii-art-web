@@ -4,10 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- viewport makes page fit phones -->
     <title>ASCII Art Web</title>
+    <link rel="stylesheet" href="../static/style.css">
 </head>
 <body>
     <main>
         <h1>ASCII ART WEB</h1>
+
+        <form action="/ascii-art" method="POST">
+            <label for="text">Input text below</label>
+            <textarea id="text" name="text" placeholder="Type something..." required></textarea> <!-- REQUIRED FIELD -->
+            <button type="submit">Generate art</button>
+        </form>
     </main>
 </body>
 </html>
+
+
+<!-- 
+NOTES: 
+- The server only sends files it’s told to send, so whoever writes main.go must add: http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static")))) 
+- Open webpage with: open templates/index.html 
+-->
+    
+
