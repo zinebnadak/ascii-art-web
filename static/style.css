@@ -1,23 +1,140 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #14161b;
+    color: #e8e6e3;
+    font-family: "Segoe UI", system-ui, sans-serif;
+}
+
 /* center the page */
 main {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
-    font-family: sans-serif;
+    padding: 48px 16px;
+}
+
+h1 {
+    margin: 0 0 32px;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 2rem;
+    letter-spacing: 6px;
+    color: #f5b942;
 }
 
 /* stack the form elements vertically */
 form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    max-width: 500px;   /* keeps the box and button from getting too wide */
+    gap: 12px;
+    padding: 24px;
+    background: #1d2027;
+    border: 1px solid #2c3038;
+    border-radius: 12px;
+}
+
+label[for="text"],
+form > span {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #9aa0aa;
+}
+
+textarea {
+    min-height: 90px;
+    padding: 12px;
+    resize: vertical;
+    background: #14161b;
+    color: #e8e6e3;
+    border: 1px solid #2c3038;
+    border-radius: 8px;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 1rem;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #f5b942;
+}
+
+.banners {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.banners input {
+    position: absolute;
+    opacity: 0;
+}
+
+.banners label {
+    padding: 8px 18px;
+    border: 1px solid #2c3038;
+    border-radius: 999px;
+    cursor: pointer;
+    color: #9aa0aa;
+}
+
+.banners label:hover {
+    color: #e8e6e3;
+}
+
+.banners input:checked + label {
+    background: #f5b942;
+    border-color: #f5b942;
+    color: #14161b;
+    font-weight: 600;
+}
+
+.banners input:focus-visible + label {
+    outline: 2px solid #f5b942;
+    outline-offset: 2px;
+}
+
+button {
+    margin-top: 8px;
+    padding: 12px;
+    background: #f5b942;
+    color: #14161b;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ffcb5c;
 }
 
 /* the display screen */
 .screen {
-    margin-top: 20px;
-    padding: 10px;
+    margin-top: 24px;
+    padding: 20px;
     min-height: 150px;
-    border: 2px solid black;
+    background: #0b0c0f;
+    border: 1px solid #2c3038;
+    border-radius: 12px;
     overflow-x: auto;   /* wide art scrolls sideways instead of wrapping */
+}
+
+.screen .screen {
+    margin: 0;
+    padding: 0;
+    border: none;
+    min-height: 0;
+}
+
+pre {
+    margin: 0;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 14px;
+    line-height: 1.15;
+    color: #f5b942;
 }
