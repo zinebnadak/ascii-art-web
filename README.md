@@ -2,6 +2,8 @@
 
 A small web page that turns your text into ASCII art, for anyone who wants to try ascii-art without the terminal.
 
+![frontend](images/frontend.png)
+
 ## Description
 ascii-art-web is a Go HTTP server that gives a web GUI to our previous project, ascii-art.
 You type a text, pick a banner (`standard`, `shadow` or `thinkertoy`), press the button, and the server sends back the page with your text drawn in ASCII art.
